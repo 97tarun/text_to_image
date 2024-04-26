@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Images</title>
+    <style>
+        ul li{
+            list-style-type:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated Images</h1>
+    <ul> 
+        {% for url in image_urls %}
+            <li><img src="/media/{{ url }}"  alt="" width="200px" height="80px"></li>
+        {% endfor %}
+    </ul>
+    <!-- <form method="get" action="{% url 'generate_images' %}">
+        <input type="text" name="text_input" placeholder="generate your image here..." width="20px">
+        <button >Generate</button>
+    </form>
+    {% if image_url %}
+    <div class="messages">
+        <div class="message">
+            <p><img src="{{ image_url }}"></p>
+        </div>
+    </div>
+    {% endif %} -->
+</body>
+</html>
